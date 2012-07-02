@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 This repo contains functionality to fetch data from yammer for purposes of building a learning analytics engine.
+=======
+This repo contains a learning analytics platform using data from Yammer.
+>>>>>>> newbranch

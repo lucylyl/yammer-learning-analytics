@@ -5,8 +5,6 @@ import getopt
 import sys
 
 def fetch_yammer_msg():
-	CONSUMER_KEY = '2ynGJkWv7iwTHoQCCl4OyA'
-	CONSUMER_SECRET = 'aWJXVf7hWWJhHab9tgZy6klJ9DAcJ03wgNRGfUVPYI'
 
 	# create the OAuth consumer credentials
 	consumer = oauth.Consumer(CONSUMER_KEY, CONSUMER_SECRET)
@@ -16,7 +14,7 @@ def fetch_yammer_msg():
 	# passing your CONSUMER_KEY (application key) to 
 	# https://www.yammer.com/oauth/request_token. 
 
-	response, content = client.request('https://www.yammer.com/oauth/request_token', 'POST', urllib.urlencode({'method': 'get', 'keys': '2ynGJkWv7iwTHoQCCl4OyA'}))
+	response, content = client.request('https://www.yammer.com/oauth/request_token', 'POST', urllib.urlencode({'method': 'get', 'keys': ''}))
 	print response, content, "\n"
 	parsed_content = dict(cgi.parse_qsl(content))
 	request_token = oauth.Token(parsed_content['oauth_token'], parsed_content['oauth_token_secret'])
